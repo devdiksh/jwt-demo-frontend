@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import config from "../config";
+import axios from 'axios'
 
 const Form = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(username)
-    console.log(password)
+    axios.post(`${config.SERVER_BASE_URL}/login`, {
+      username, password
+    })
   }
 
   return (
