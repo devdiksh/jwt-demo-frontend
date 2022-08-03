@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import LoginForm from "../layouts/LoginForm";
-import UserData from "../layouts/UserData";
+import LoggedIn from "../layouts/LoggedIn";
 
 const App = () => {
   const [accessToken, setAccessToken] = useState(window.localStorage.getItem("accessToken"))
@@ -14,7 +14,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         {!accessToken && <LoginForm />}
-        {accessToken && <UserData />}
+        {accessToken && <LoggedIn />}
       </header>
     </div>
   );

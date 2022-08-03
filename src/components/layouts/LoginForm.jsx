@@ -1,26 +1,23 @@
 import React, { useState } from "react";
-import config from "../../config";
-import axios from 'axios'
+import axiosClient from "../../axiosClient";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      const response = await axios.post(`${config.SERVER_BASE_URL}/login`, {
-        username, password
-      })
-      window.localStorage.setItem('accessToken', response?.data?.token)
-      window.location.reload()
+      const response = await axiosClient.postRequest('/login', {
+        username,
+        password,
+      });
+      window.localStorage.setItem("accessToken", response?.data?.token);
+      window.location.reload();
+    } catch (err) {
+      console.error("Login Failed", err);
     }
-    catch(err) {
-      console.error('Login Failed', err)
-    }
-
-  }
+  };
 
   return (
     <header className="App-header">

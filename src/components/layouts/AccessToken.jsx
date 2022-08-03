@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserData = () => {
+const AccessToken = () => {
   const handleLogout = () => {
     window.localStorage.removeItem("accessToken");
     window.location.reload()
@@ -32,4 +32,4 @@ const UserData = () => {
   );
 };
 
-export default UserData;
+export default AccessToken;
