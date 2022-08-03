@@ -38,3 +38,32 @@
   margin: 10px;
   padding: 0.4em;
 }
+
+
+.Jwtbox {
+  width:calc(10px + 70vmin);
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(37, 37, 37);
+}
+
+.Jwt-text-red {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+  color: #fb015b;
+}
+
+.Jwt-text-violet {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+  color: #d63aff;
+}
+
+.Jwt-text-blue {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+  color: #00b9f1;
+}
