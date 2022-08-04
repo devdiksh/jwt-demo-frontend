@@ -1,15 +1,11 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
-import { useHistory } from "react-router-dom";
-import { ROUTE_PATHS } from "../../routes/routePath";
 import { CustomLink } from "../ui/CustomLink";
-import NavButton from "../ui/NavButton";
 
 const Introduction = () => {
   const rfcLink = "https://datatracker.ietf.org/doc/html/rfc7519";
   const hmacLink = "https://en.wikipedia.org/wiki/HMAC";
 
-  const history = useHistory()
 
   return (
     <div>
@@ -34,7 +30,7 @@ const Introduction = () => {
         key pairs, the signature also certifies that only the party holding the
         private key is the one that signed it.`}
       </p>
-      <NavButton handleClick={() => {history.push(ROUTE_PATHS.STRUCTURE)}}>{`Structure ->`}</NavButton>
+      {/* <NavButton handleClick={() => {history.push(ROUTE_PATHS.STRUCTURE)}}>{`Structure ->`}</NavButton> */}
     </div>
   );
 };

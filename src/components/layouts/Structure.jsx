@@ -1,9 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { useRef, useState } from "react";
-import { useHistory } from "react-router-dom";
 import { headerEx, payloadEx, signatureEx } from "../../assets";
-import { ROUTE_PATHS } from "../../routes/routePath";
-import NavButton from "../ui/NavButton";
+
 
 const JwtDot = () => {
   return (
@@ -173,7 +171,6 @@ const JwtExplain = ({
 const Structure = () => {
   const [selectedPart, setSelectedPart] = useState(null);
   const selectedPartRef = useRef(null);
-  const history = useHistory();
 
   const header = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9";
   const payload =
@@ -213,13 +210,6 @@ const Structure = () => {
         reference={selectedPartRef}
         selectedPart={selectedPart}
       />
-      {!selectedPart && (
-        <NavButton
-          handleClick={() => {
-            history.push(ROUTE_PATHS.VERIFICATION);
-          }}
-        >{`Verification ->`}</NavButton>
-      )}
     </div>
   );
 };

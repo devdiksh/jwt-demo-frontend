@@ -35,25 +35,23 @@
   color: white;
 }
 
-.Home-Logo {
-  fill: #ff40a3;
-  width: calc(10px + 10vmin);
-  margin: calc(10px + 4vmin) calc(10px + 2vmin);
+.Nav-Logo {
+  width: calc(10px + 8vmin);
+  margin: calc(10px + 4vmin) calc(10px + 1vmin);
   cursor: pointer;
   opacity: 0.5;
   transition: transform .2s;
+}
+
+.Home-Logo {
+  fill: #ff40a3;
 }
 
 .Back-Logo {
   fill: #ffbb47;
-  width: calc(10px + 10vmin);
-  margin: calc(10px + 4vmin) calc(10px + 2vmin);
-  cursor: pointer;
-  opacity: 0.5;
-  transition: transform .2s;
 }
 
-.Home-Logo:hover, .Back-Logo:hover {
+.Nav-Logo:hover {
   opacity: 1;
   transform: scale(1.2);
 }
@@ -143,7 +141,7 @@
   font-size: calc(8px + 2.7vmin);
   text-align: center;
   width: 65vw;
-  margin: auto;
+  margin: 2vh auto;
   word-wrap: break-word;
 }
 
