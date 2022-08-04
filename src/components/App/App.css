@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  min-height: 100vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -10,13 +10,35 @@
 
 .App-header {
   background-color: #000000;
-  min-height: 100vh;
   display: flex;
+  text-align: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Home-Logo {
+  fill: #ff40a3;
+  width: calc(10px + 10vmin);
+  margin: calc(10px + 4vmin) calc(10px + 2vmin);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: transform .2s;
+}
+
+.Back-Logo {
+  fill: #ffbb47;
+  width: calc(10px + 10vmin);
+  margin: calc(10px + 4vmin) calc(10px + 2vmin);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: transform .2s;
+}
+
+.Home-Logo:hover, .Back-Logo:hover {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 .Form {
@@ -68,9 +90,15 @@
   color: #00b9f1;
 }
 
+.Jwt-text-white {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+  color: rgb(207, 248, 200);
+}
+
 
 .jwtLogo {
-  margin-bottom: 10vh;
   cursor: pointer;
   width:calc(10px + 30vmin);
   animation: rotation 10s infinite linear;
@@ -80,4 +108,44 @@
   to {
       -webkit-transform: rotate(360deg);
   }
+}
+
+
+.Heading {
+  font-size: calc(10px + 6vmin);
+  margin: 20px;
+}
+
+.Para {
+  font-size: calc(8px + 2.4vmin);
+  width: 75vw;
+  margin: 20px;
+}
+
+.Link {
+  color: #00b9f1;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.Navbuttonbox {
+  padding: 3vmin;
+  margin: 8vmin 12vmin;
+  border: 1vmin solid #9557f1;
+  border-radius: 30%;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: transform .2s;
+}
+
+.Navbuttonbox:hover {
+  background-color: #140b22 ;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.Navbutton {
+  color: #9557f1;
+  cursor: pointer;
+  font-size: calc(30px + 3vmin);
 }

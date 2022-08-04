@@ -1,6 +1,7 @@
 const ROUTE_PATHS = {
   HOME: "/",
-  INTRODUCTION: '/introduction'
+  INTRODUCTION: "/introduction",
+  WORKING: "/working"
 };
 
-export default ROUTE_PATHS;
+export { ROUTE_PATHS };

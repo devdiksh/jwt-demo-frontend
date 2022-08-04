@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { jwtLogo } from "../../assets";
-import ROUTE_PATHS from "../../routes/routePath";
+import { ROUTE_PATHS } from "../../routes/routePath";
 
 const LandingPage = () => {
   const history = useHistory();

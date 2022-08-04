@@ -1,6 +1,15 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import Header from "../components/layouts/Header";
 import routes from "./routeList";
+
+const HeaderThis = (props) => {
+  return (
+    <Header>
+      <props.component />
+    </Header>
+  );
+};
 
 const CustomRoutes = () => {
   return (
@@ -10,7 +19,7 @@ const CustomRoutes = () => {
           key={path}
           path={path}
           exact={exact}
-          render={() => <rest.component />}
+          render={() => <HeaderThis component={rest.component} />}
         />
       ))}
     </Switch>

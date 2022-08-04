@@ -22,13 +22,9 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <AppContext.Provider value={{ accessToken }}>
-          <Routes />
-        </AppContext.Provider>
-      </header>
-    </div>
+    <AppContext.Provider value={{ accessToken }}>
+      <Routes />
+    </AppContext.Provider>
   );
 };
 
