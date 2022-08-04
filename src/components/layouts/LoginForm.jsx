@@ -8,19 +8,19 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axiosClient.postRequest('/login', {
+      const response = await axiosClient.postRequest("/login", {
         username,
         password,
       });
       window.localStorage.setItem("accessToken", response?.data?.token);
-      window.location.reload();
+      window.location.reload()
     } catch (err) {
       console.error("Login Failed", err);
     }
   };
 
   return (
-    <header className="App-header">
+    <div style={{ display: "contents" }}>
       Login Form
       <form onSubmit={(e) => handleSubmit(e)} className="Form">
         <input
@@ -45,7 +45,7 @@ const LoginForm = () => {
           Submit
         </button>
       </form>
-    </header>
+    </div>
   );
 };
 

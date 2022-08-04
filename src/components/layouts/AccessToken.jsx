@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import axiosClient from "../../axiosClient";
+import { AppContext } from "../App/AppContext";
 
 const AccessToken = () => {
+  const { accessToken } = useContext(AppContext);
+  console.log('ACCES', accessToken)
+
   const handleLogout = async () => {
     try {
       await axiosClient.postRequest("/logout");
@@ -12,22 +16,31 @@ const AccessToken = () => {
     window.location.reload();
   };
 
-  const accessToken = window.localStorage.getItem("accessToken");
+  let header = "";
+  let payload = "";
+  let signature = "";
 
-  const header = accessToken.split(".")[0];
-  const payload = accessToken.split(".")[1];
-  const signature = accessToken.split(".")[2];
+  if (accessToken) {
+    header = accessToken.split(".")[0];
+    payload = accessToken.split(".")[1];
+    signature = accessToken.split(".")[2];
+  }
+
   return (
     <div>
       Access Token
-      <div className="Jwtbox">
-        <span className="Jwt-text-red">{`${header}.`}</span>
-        <span className="Jwt-text-violet">{`${payload}.`}</span>
-        <span className="Jwt-text-blue">{`${signature}`}</span>
-      </div>
-      <button className="Submit" onClick={handleLogout}>
-        Logout
-      </button>
+      {header && payload && signature && (
+        <div>
+          <div className="Jwtbox">
+            <span className="Jwt-text-red">{`${header}.`}</span>
+            <span className="Jwt-text-violet">{`${payload}.`}</span>
+            <span className="Jwt-text-blue">{`${signature}`}</span>
+          </div>
+          <button className="Submit" onClick={handleLogout}>
+            Logout
+          </button>
+        </div>
+      )}
     </div>
   );
 };
