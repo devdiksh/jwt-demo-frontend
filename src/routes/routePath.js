@@ -1,6 +1,7 @@
 const ROUTE_PATHS = {
   HOME: "/",
   INTRODUCTION: "/introduction",
+  STRUCTURE: '/structure',
   WORKING: "/working"
 };
 

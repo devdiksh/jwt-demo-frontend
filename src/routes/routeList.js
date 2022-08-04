@@ -1,6 +1,6 @@
 import Introduction from "../components/layouts/Introduction";
 import LandingPage from "../components/layouts/LandingPage";
-import Working from "../components/layouts/Working";
+import Structure from "../components/layouts/Structure";
 
 import { ROUTE_PATHS } from "./routePath";
 
@@ -18,8 +18,8 @@ const routes = [
   },
 
   {
-    path: ROUTE_PATHS.WORKING,
-    component: Working,
+    path: ROUTE_PATHS.STRUCTURE,
+    component: Structure,
     exact: true,
   },
 ];
