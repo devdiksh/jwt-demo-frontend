@@ -67,3 +67,17 @@
   word-break: normal;
   color: #00b9f1;
 }
+
+
+.jwtLogo {
+  margin-bottom: 10vh;
+  cursor: pointer;
+  width:calc(10px + 30vmin);
+  animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  to {
+      -webkit-transform: rotate(360deg);
+  }
+}
