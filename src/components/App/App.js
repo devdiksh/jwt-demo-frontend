@@ -1,8 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import LoginForm from "../layouts/LoginForm";
-import LoggedIn from "../layouts/LoggedIn";
 import { AppContext } from "./AppContext";
+import Routes from "../../routes";
 
 const App = () => {
   const [accessToken, setAccessToken] = useState(
@@ -25,13 +24,8 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <AppContext.Provider
-          value={{
-            accessToken,
-          }}
-        >
-          <LoginForm />
-          <LoggedIn />
+        <AppContext.Provider value={{ accessToken }}>
+          <Routes />
         </AppContext.Provider>
       </header>
     </div>
