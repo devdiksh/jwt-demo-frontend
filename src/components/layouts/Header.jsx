@@ -24,6 +24,9 @@ const Header = ({ children }) => {
         return ROUTE_PATHS.STRUCTURE;
       }
       case ROUTE_PATHS.STRUCTURE: {
+        return ROUTE_PATHS.VERIFICATION;
+      }
+      case ROUTE_PATHS.VERIFICATION: {
         return ROUTE_PATHS.EXAMPLE;
       }
       case ROUTE_PATHS.EXAMPLE: {

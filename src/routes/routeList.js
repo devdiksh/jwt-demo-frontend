@@ -4,6 +4,7 @@ import LandingPage from "../components/layouts/LandingPage";
 import Revocation from "../components/layouts/Revocation";
 import Strategy from "../components/layouts/Strategy";
 import Structure from "../components/layouts/Structure";
+import Verification from "../components/layouts/Verification";
 
 import { ROUTE_PATHS } from "./routePath";
 
@@ -41,6 +42,12 @@ const routes = [
   {
     path: ROUTE_PATHS.REVOCATION,
     component: Revocation,
+    exact: true,
+  },
+
+  {
+    path: ROUTE_PATHS.VERIFICATION,
+    component: Verification,
     exact: true,
   },
 ];

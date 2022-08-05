@@ -36,7 +36,7 @@ const Example = () => {
 
   return (
     <div>
-      <h3 className="Heading">Authentication & Authorization</h3>
+      <h3 className="Heading">Login Application</h3>
       <div style={{ marginBottom: "10vh" }}>
         <p className="Para">
           {`This is a simple login form.

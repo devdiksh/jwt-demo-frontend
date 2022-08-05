@@ -162,6 +162,10 @@
   color: #94e8ff;
 }
 
+.Para-purple {
+  color: #ab94ff;
+}
+
 
 .Para-yellow {
   color: #5c596b;
@@ -169,8 +173,12 @@
 
 .Para-bigger {
   font-size: calc(16px + 2.7vmin);
-
 }
+
+.Para-medium {
+  font-size: calc(10px + 7vmin);
+}
+
 
 .Link {
   color: #00b9f1;

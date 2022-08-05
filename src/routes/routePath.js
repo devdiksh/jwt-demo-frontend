@@ -5,7 +5,8 @@ const ROUTE_PATHS = {
   WORKING: "/working",
   EXAMPLE: "/example",
   STRATEGY: "/strategy",
-  REVOCATION: "/revocation"
+  REVOCATION: "/revocation",
+  VERIFICATION: "/verification"
 };
 
 export { ROUTE_PATHS };

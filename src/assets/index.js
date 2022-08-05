@@ -7,6 +7,8 @@ import payloadEx from "./jwt-example/payload-ex.png";
 import signatureEx from "./jwt-example/signature-ex.png";
 import accessAndRefreshEx from "./jwt-example/access_refresh.png";
 import revokeEx from "./jwt-example/revoking-blacklist.png";
+import hmacEx from "./jwt-example/hmac.png";
+
 
 import verificationImage from "./verification.png";
 
@@ -21,4 +23,5 @@ export {
   signatureEx,
   accessAndRefreshEx,
   revokeEx,
+  hmacEx
 };
