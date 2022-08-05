@@ -70,17 +70,12 @@
   color: rgb(0, 0, 0);
 }
 
-.Text-field {
-  font-size: calc(10px + 2vmin);
-  margin: 10px;
-  padding: 0.4em;
-}
 
 
 .Jwtbox {
-  width:calc(10px + 70vmin);
+  width:calc(10px + 75vmin);
   padding: 20px;
-  margin: 20px;
+  margin: 20px auto;
   background-color: rgb(37, 37, 37);
 }
 
@@ -145,32 +140,50 @@
   word-wrap: break-word;
 }
 
+.Para-green {
+  color: greenyellow;
+}
+
+.Para-red {
+  color: red;
+}
+
 .Link {
   color: #00b9f1;
   text-decoration: underline;
   cursor: pointer;
 }
 
-.Navbuttonbox {
+
+.Text-field {
+  font-size: calc(15px + 2vmin);
+  margin: 10px;
+  padding: 0.4em;
   padding: 3vmin;
-  margin: 8vmin 12vmin;
   border: 1vmin solid #ffbb47;
+  border-radius: 10%;
+  outline: none;
+  max-width: 20vw;
+}
+
+
+.Submit-Button {
+  font-size: calc(15px + 2vmin);
+  padding: 3vmin;
+  border: 1vmin solid #ffbb47;
+  margin: 2vmin;
+  background-color: #56472f;
   border-radius: 30%;
   cursor: pointer;
-  opacity: 0.08;
-  transition: transform .3s;
-}
-
-.Navbuttonbox:hover {
-  background-color: #5b4d35 ;
   opacity: 1;
-  transform: scale(1.1);
 }
 
-.Navbutton {
-  color: #ffbb47;
-  cursor: pointer;
-  font-size: calc(30px + 3vmin);
+.Light-Button {
+  opacity: 0.5;
+}
+
+.Light-Button:hover {
+  opacity: 1;
 }
 
 .Jwt-Example {

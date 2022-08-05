@@ -26,14 +26,30 @@ class ApiClient {
   deleteRequest = (url, config) => this.makeRequest(url, "delete", config);
 }
 
-const axiosClient = axios.create({
-  baseURL,
-  headers: {
-    Authorization: `Bearer ${window.localStorage.getItem("accessToken")}`,
-  },
-});
-axiosClient.defaults.withCredentials = true;
+const getAccessToken = () => window.localStorage.getItem("accessToken");
 
-export { axiosClient };
+const getAxiosClient = () => {
+  let clientConfig = {
+    baseURL,
+  };
 
-export default new ApiClient(axiosClient);
+  if (getAccessToken()) {
+    clientConfig = {
+      ...clientConfig,
+      headers: {
+        Authorization: `Bearer ${getAccessToken()}`,
+      },
+    };
+  }
+
+  const axiosClient = axios.create({
+    ...clientConfig,
+  });
+  axiosClient.defaults.withCredentials = true;
+
+  return new ApiClient(axiosClient);
+};
+
+export { getAxiosClient, getAccessToken };
+
+export default new ApiClient(getAxiosClient());

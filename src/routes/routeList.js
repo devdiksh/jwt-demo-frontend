@@ -1,3 +1,4 @@
+import Example from "../components/layouts/Example";
 import Introduction from "../components/layouts/Introduction";
 import LandingPage from "../components/layouts/LandingPage";
 import Structure from "../components/layouts/Structure";
@@ -20,6 +21,12 @@ const routes = [
   {
     path: ROUTE_PATHS.STRUCTURE,
     component: Structure,
+    exact: true,
+  },
+
+  {
+    path: ROUTE_PATHS.EXAMPLE,
+    component: Example,
     exact: true,
   },
 ];

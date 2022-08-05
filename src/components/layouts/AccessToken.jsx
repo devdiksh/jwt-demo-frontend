@@ -1,21 +1,6 @@
-import React, { useContext } from "react";
-import axiosClient from "../../axiosClient";
-import { AppContext } from "../App/AppContext";
+import React from "react";
 
-const AccessToken = () => {
-  const { accessToken } = useContext(AppContext);
-  console.log('ACCES', accessToken)
-
-  const handleLogout = async () => {
-    try {
-      await axiosClient.postRequest("/logout");
-      window.localStorage.removeItem("accessToken");
-    } catch (err) {
-      console.error("Logout Failed", err);
-    }
-    window.location.reload();
-  };
-
+const AccessToken = ({ accessToken }) => {
   let header = "";
   let payload = "";
   let signature = "";
@@ -28,7 +13,6 @@ const AccessToken = () => {
 
   return (
     <div>
-      Access Token
       {header && payload && signature && (
         <div>
           <div className="Jwtbox">
@@ -36,9 +20,7 @@ const AccessToken = () => {
             <span className="Jwt-text-violet">{`${payload}.`}</span>
             <span className="Jwt-text-blue">{`${signature}`}</span>
           </div>
-          <button className="Submit" onClick={handleLogout}>
-            Logout
-          </button>
+          <div></div>
         </div>
       )}
     </div>

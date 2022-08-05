@@ -2,10 +2,10 @@ import React from "react";
 import AccessToken from "./AccessToken";
 import GetUser from "./GetUser";
 
-const LoggedIn = () => {
+const LoggedIn = ({ accessToken }) => {
   return (
     <div>
-      <AccessToken />
+      <AccessToken accessToken={accessToken} />
       <GetUser />
     </div>
   );

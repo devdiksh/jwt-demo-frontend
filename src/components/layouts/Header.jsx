@@ -24,7 +24,7 @@ const Header = ({ children }) => {
         return ROUTE_PATHS.STRUCTURE;
       }
       case ROUTE_PATHS.STRUCTURE: {
-        return ROUTE_PATHS.WORKING;
+        return ROUTE_PATHS.EXAMPLE;
       }
 
       default: {
@@ -41,16 +41,16 @@ const Header = ({ children }) => {
   return (
     <div style={{ backgroundColor: "black" }}>
       <div className="App">
-        <div style={{
-          marginLeft: '5vw'
-        }}>
+        <div
+          style={{
+            marginLeft: "5vw",
+          }}
+        >
           <HomeLogo className="Home-Logo Nav-Logo" onClick={gohome} />
           {location.pathname !== ROUTE_PATHS.HOME && (
-            <>
-              <BackLogo className="Back-Logo Nav-Logo" onClick={goback} />
-              <NextLogo className="Back-Logo Nav-Logo" onClick={goNext} />
-            </>
+            <BackLogo className="Back-Logo Nav-Logo" onClick={goback} />
           )}
+          <NextLogo className="Back-Logo Nav-Logo" onClick={goNext} />
         </div>
         <header className="App-header">{children}</header>
       </div>
