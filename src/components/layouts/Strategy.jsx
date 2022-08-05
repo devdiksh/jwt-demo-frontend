@@ -1,21 +1,20 @@
 import React from "react";
 import { accessAndRefreshEx } from "../../assets";
-import { CustomLink } from "../ui/CustomLink";
 
 const Strategy = () => {
   return (
     <div>
       <h3 className="Heading">Access Token & Refresh Token</h3>
-      <p className="Para">
+      <div className="Para">
         <span className="Para Para-green Para-bigger"> Access Token </span>
         <span className="Para">
           contains all the information the server needs to know if the user /
           device can access the resource you are requesting or not. They are
           usually expired tokens with a short validity period.
         </span>
-      </p>
+      </div>
 
-      <p className="Para">
+      <div className="Para">
         <span className="Para Para-blue Para-bigger"> Refresh token </span>
         <span className="Para">
           is used to generate a new access token. Typically, if the access token
@@ -25,11 +24,11 @@ const Strategy = () => {
           token that allows the user to continue accessing the application
           resources.
         </span>
-      </p>
+      </div>
 
       <img
         style={{
-          width: "60vw",
+          width: "75vw",
           height: "auto",
         }}
         src={accessAndRefreshEx}

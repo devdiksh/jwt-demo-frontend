@@ -1,6 +1,7 @@
 import Example from "../components/layouts/Example";
 import Introduction from "../components/layouts/Introduction";
 import LandingPage from "../components/layouts/LandingPage";
+import Revocation from "../components/layouts/Revocation";
 import Strategy from "../components/layouts/Strategy";
 import Structure from "../components/layouts/Structure";
 
@@ -34,6 +35,12 @@ const routes = [
   {
     path: ROUTE_PATHS.STRATEGY,
     component: Strategy,
+    exact: true,
+  },
+
+  {
+    path: ROUTE_PATHS.REVOCATION,
+    component: Revocation,
     exact: true,
   },
 ];

@@ -29,6 +29,9 @@ const Header = ({ children }) => {
       case ROUTE_PATHS.EXAMPLE: {
         return ROUTE_PATHS.STRATEGY;
       }
+      case ROUTE_PATHS.STRATEGY: {
+        return ROUTE_PATHS.REVOCATION;
+      }
 
       default: {
         return ROUTE_PATHS.HOME;

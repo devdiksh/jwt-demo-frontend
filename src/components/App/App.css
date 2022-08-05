@@ -154,8 +154,17 @@
   color: red;
 }
 
+.Para-orange {
+  color: rgb(255, 91, 27);
+}
+
 .Para-blue {
   color: #94e8ff;
+}
+
+
+.Para-yellow {
+  color: #5c596b;
 }
 
 .Para-bigger {
