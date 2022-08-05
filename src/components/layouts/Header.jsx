@@ -26,6 +26,9 @@ const Header = ({ children }) => {
       case ROUTE_PATHS.STRUCTURE: {
         return ROUTE_PATHS.EXAMPLE;
       }
+      case ROUTE_PATHS.EXAMPLE: {
+        return ROUTE_PATHS.STRATEGY;
+      }
 
       default: {
         return ROUTE_PATHS.HOME;
@@ -48,11 +51,14 @@ const Header = ({ children }) => {
         >
           <HomeLogo className="Home-Logo Nav-Logo" onClick={gohome} />
           {location.pathname !== ROUTE_PATHS.HOME && (
-            <BackLogo className="Back-Logo Nav-Logo" onClick={goback} />
+            <>
+              <BackLogo className="Back-Logo Nav-Logo" onClick={goback} />
+              <NextLogo className="Back-Logo Nav-Logo" onClick={goNext} />
+            </>
           )}
-          <NextLogo className="Back-Logo Nav-Logo" onClick={goNext} />
         </div>
         <header className="App-header">{children}</header>
+        <footer className="App-footer" />
       </div>
     </div>
   );

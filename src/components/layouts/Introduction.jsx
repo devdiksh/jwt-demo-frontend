@@ -30,7 +30,6 @@ const Introduction = () => {
         key pairs, the signature also certifies that only the party holding the
         private key is the one that signed it.`}
       </p>
-      {/* <NavButton handleClick={() => {history.push(ROUTE_PATHS.STRUCTURE)}}>{`Structure ->`}</NavButton> */}
     </div>
   );
 };

@@ -4,6 +4,7 @@ const ROUTE_PATHS = {
   STRUCTURE: "/structure",
   WORKING: "/working",
   EXAMPLE: "/example",
+  STRATEGY: "/strategy"
 };
 
 export { ROUTE_PATHS };

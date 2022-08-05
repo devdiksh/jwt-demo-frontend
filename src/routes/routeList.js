@@ -1,6 +1,7 @@
 import Example from "../components/layouts/Example";
 import Introduction from "../components/layouts/Introduction";
 import LandingPage from "../components/layouts/LandingPage";
+import Strategy from "../components/layouts/Strategy";
 import Structure from "../components/layouts/Structure";
 
 import { ROUTE_PATHS } from "./routePath";
@@ -27,6 +28,12 @@ const routes = [
   {
     path: ROUTE_PATHS.EXAMPLE,
     component: Example,
+    exact: true,
+  },
+
+  {
+    path: ROUTE_PATHS.STRATEGY,
+    component: Strategy,
     exact: true,
   },
 ];

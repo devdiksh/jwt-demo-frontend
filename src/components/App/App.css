@@ -35,6 +35,12 @@
   color: white;
 }
 
+.App-footer {
+  background-color: #000000;
+  height: 20vh;
+}
+
+
 .Nav-Logo {
   width: calc(10px + 8vmin);
   margin: calc(10px + 4vmin) calc(10px + 1vmin);
@@ -129,7 +135,7 @@
 
 .Heading {
   font-size: calc(10px + 6vmin);
-  margin: 20px;
+  margin: 20px 20px 40px 20px;
 }
 
 .Para {
@@ -146,6 +152,15 @@
 
 .Para-red {
   color: red;
+}
+
+.Para-blue {
+  color: #94e8ff;
+}
+
+.Para-bigger {
+  font-size: calc(16px + 2.7vmin);
+
 }
 
 .Link {
